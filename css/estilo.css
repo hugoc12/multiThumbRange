@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+
+
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.MultiThumbSlider{
+	position: relative;
+	
+	width: 500px;
+	height: 20px;
+	margin:100px;
+
+	display: flex;
+	align-items: center;
+}
+
+.MultiThumbSlider__slider{
+	position: relative;
+	
+	width: 500px;
+	height: 20px;
+
+	margin:0 10px;
+
+	display: flex;
+	align-items: center;
+}
+
+.MultiThumbSlider__fundo{
+	background-color: #f1f1f1;
+	position: absolute;
+	width: 100%;
+	height: 20px;
+	border-radius: 20px;
+}
+
+.MultiThumbSlider__ativa{
+	background-color: #62BEC1;
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 20px;
+}
+
+.MultiThumbSlider__thumb{
+	background-color: #646881;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-radius: 100%;
+}
+
+.thumb--left{
+	left: 0;
+	transform: translate(-10px, 0px);
+}
+
+.thumb--right{
+	right: 0;
+	transform: translate(10px, 0px);
+}
+
+#input-left, #input-right{
+	display: block;
+	width: 100%;
+	height: 20px;
+
+	position: absolute;
+	z-index: 1;
+
+	-webkit-appearance: none; /* PARA RESET DE ESTILO PADRÃO DO NAVEGADOR */
+	pointer-events: none; /* PARA OCULTAR A BARRA */
+	opacity: 0;
+}
+
+#input-left::-webkit-slider-thumb{
+	-webkit-appearance: none;
+	pointer-events: all;
+
+	background-color: red;
+	width: 20px;
+	height: 20px;
+}
+
+#input-right::-webkit-slider-thumb{
+	-webkit-appearance: none;
+	pointer-events: all;
+
+	background-color: red;
+	width: 20px;
+	height: 20px;
+}
+
+
+.MultiThumbSlider__cxValor{
+	width: 120px;
+	height: 20px;
+	background-color: #aae2e4;
+	text-align: center;
+	padding: 20px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	border-radius: 20px;
+}
+
+.cxValor--Min{
+	position: absolute;
+	right: 101%;
+}
+
+.cxValor--Max{
+	position: absolute;
+	left: 101%;
+}
+
+.MultiThumbSlider__TextoVl{
+	font-weight: bold;
+	color: #646881;
+}
